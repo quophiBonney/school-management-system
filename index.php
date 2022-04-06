@@ -1,3 +1,10 @@
+<?php
+
+use GuzzleHttp\Cookie\SetCookie;
+
+setcookie("Auction_User_Details", "School Mangement System", time() + 365 * 24 * 60 * 60);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +15,7 @@
 <link rel="shortcut icon" href="images/svg.png">
 <title>Home</title>
 <!--Custom CSS -->
-<link rel="stylesheet" href="quophi.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="quophi.css">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
 <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
@@ -127,6 +134,14 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
   </div>
 </div>
 <div class="space-out"></div>
+<?php
+if(isset($_COOKIE["Auction_User_Details"])){
+  echo "This site accepts cookies"  . $_COOKIE["Auction_User_Details"];
+}else {
+  echo "No items for auction";
+}
+
+?>
 <div class="space-out"></div>
 <div class="container-fluid justify-content-center align-items-center text-center mt-4 p-3">
   <div class="row">
@@ -151,7 +166,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
     here. Some of us never taught and believe that we have a place(school) which has a systemand motivated to aspire for greatness all 
     the time.We the students here don't call it school, we call it home because everything can be found 
     here. Some of us never taught and believe that 
-    <center><img src="images/rating.png" alt="rating"></center>
     </div>
 </div>
 </div>
@@ -223,7 +237,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
     to keep the students more focus, thrilled, excited and motivated to aspire for greatness all 
     the time.We the students here don't call it school, we call it home because everything can be found 
     here.
-    <center><img src="images/rating.png" alt="rating"></center>
     </div>
     <div class="col-md-6">
     <img class="message-img" src="images/students.png" alt="smiling-students">
@@ -294,7 +307,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
     <div class="text-center p-3">
     <strong>MR BROWN<br>
     CEO, CODLOGIC ENG LTD</strong><br>
-    <img src="images/rating.png" alt="rating">
     </div>
     </div>
   </div>
@@ -306,7 +318,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
     <div class="text-center p-3">
     <strong>MR BROWN<br>
     CEO, CODLOGIC ENG LTD</strong><br>
-    <img src="images/rating.png" alt="rating">
     </div>
     </div>
   </div>

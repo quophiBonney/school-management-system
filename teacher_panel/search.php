@@ -78,5 +78,5 @@ if(isset($_POST['search'])){
 }
 }
 ?>
-</bod>
+</body>
 </html>

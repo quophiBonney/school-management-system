@@ -7,34 +7,37 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true"> 
-<meta name="homepage" content="the main page that visitors sees first">
-<link rel="shortcut icon" href="favicon.png">
-<title>Admin Panel</title>
-<!--Custom CSS -->
-<link rel="stylesheet" href="fontawesome/css/quophi.css?v=<?php echo time();?>">
-<link rel="stylesheet" href="fontawesome/css/all.min.css">
-<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true">
+    <meta name="homepage" content="the main page that visitors sees first">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>Admin Panel</title>
+    <!--Custom CSS -->
+    <link rel="stylesheet" href="fontawesome/css/quophi.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
     <!-- Custom styles for this template-->
     <link href="fontawesome/css/sb-admin-2.min.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src=”https://code.jquery.com/jquery-3.2.1.slim.min.js” integrity=”sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN” crossorigin=”anonymous”>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src=”https://code.jquery.com/jquery-3.2.1.slim.min.js”
+        integrity=”sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN” crossorigin=”anonymous”>
 
-</script>
-</head> 
+    </script>
+</head>
+
 <body class="dashboard-info">
-<div class="space"></div>
-<div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
@@ -46,13 +49,7 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">Admin Panel</div>
             </a>
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Examination Records
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
+          <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -61,14 +58,12 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Attendance:</h6>
-                        <a class="collapse-item" href="staff_attendance.php">Staff Attendance</a>
                         <h6 class="collapse-header text-dark">Primary Classes:</h6>
                         <a class="collapse-item" href="primary_one_exams.php">Primary One</a>
                         <a class="collapse-item" href="primary_two_exams.php">Primary Two</a>
                         <a class="collapse-item" href="primary_three_exams.php">Primary Three</a>
                         <a class="collapse-item" href="primary_four_exams.php">Primary Four</a>
-                        <a class="collapse-item" href="primary_five_exams.php">Primary Five</a> 
+                        <a class="collapse-item" href="primary_five_exams.php">Primary Five</a>
                         <a class="collapse-item" href="primary_six_exams.php">Primary Six</a>
                     </div>
                 </div>
@@ -78,10 +73,6 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Class Tables
-            </div>
-
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -102,35 +93,33 @@
                     </div>
                 </div>
             </li>
-            <div class="sidebar-heading">
-                Class Tables
-            </div>
+            <hr class="sidebar-divider">
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="primary_one_stud.php">
+            <a class="nav-link" href="staff_attendance.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Primary One</span></a>
+                    <span>Staff Attendance</span></a>
+                    <a class="nav-link" href="staff_attendance.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Staff Attendance</span></a>
+                    <hr class="sidebar-divider">
+                    <a class="nav-link" href="staff_attendance.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Staff Attendance</span></a>
+                    <hr class="sidebar-divider">
+                    <a class="nav-link" href="staff_attendance.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Staff Attendance</span></a>
+                    <hr class="sidebar-divider">
+                    <a class="nav-link" href="staff_attendance.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Staff Attendance</span></a>
+                    <hr class="sidebar-divider">
+                    <a class="nav-link" href="staff_attendance.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Staff Attendance</span></a>
             </li>
-            
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
-        <!-- End of Sidebar -->
+</ul>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -254,8 +243,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -266,8 +254,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -278,8 +265,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="images/a6.jpg" alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -290,8 +276,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
+                                        <img class="rounded-circle" src="images/a5.jpg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -311,8 +296,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -357,16 +341,38 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card bg-danger shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                            <?php
+                                                        $conn = mysqli_connect("localhost", "root", "", "staff");
+                                                        $sql = "SELECT * FROM classOne";
+                                                        $query = mysqli_query($conn, $sql);
+                                                       
+                                                        while($row = mysqli_fetch_array($query)) {
+                              ?>                          <?php $lastid = mysqli_insert_id($conn); ?>
+                                                                   <tr>
+                                                                   <div class="text-light">
+                                                                   <?php 
+                                                                   echo "<h1>$lastid</h1>";
+                                              ?>
+
+                                            </div>
+                                                                      <td><br><div class="font-30">Class One:<?php echo  $lastid?></div></td>
+                                                                   </tr>
+                                                                   <?php 
+                                                        }
+                                                        ?>
+                                                   
+                                        
+                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                                                <h6>Primary One</h6>
+                                            </div>
+                                            <div class="h6 mb-0 text-light">Total Students</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user fa-3x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -375,16 +381,28 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card bg-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                            <?php
+                                        $conn = mysqli_connect("localhost", "root", "", "staff");
+                                        $sql = "SELECT * FROM classTwo";
+                                        $query = mysqli_query($conn, $sql);
+                                        $lastid = mysqli_insert_id($conn);                  
+                                        ?>
+                                            <div class="text-light">
+                                                <?php 
+                                            echo "<h1>$lastid</h1>";
+                                            ?>
+                                            </div>
+                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                                                <h6>Primary Two</h6>
+                                            </div>
+                                            <div class="h6 mb-0 text-light">Total Students</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-person fa-3x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -393,27 +411,28 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card bg-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                                            <?php
+                                       $conn = mysqli_connect("localhost", "root", "", "staff");
+                                       $sql = "SELECT * FROM classThree";
+                                       $query = mysqli_query($conn, $sql);
+                                       $lastid = mysqli_insert_id($conn);                  
+                                       ?>
+                                            <div class="text-light">
+                                                <?php 
+                                             echo "<h1>$lastid</h1>";
+                                            ?>
                                             </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
+                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                                                <h6>Primary Three</h6>
                                             </div>
+                                            <div class="h6 mb-0 text-light">Total Students</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user fa-3x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -422,22 +441,156 @@
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card bg-secondary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <?php
+                                        $conn = mysqli_connect("localhost", "root", "", "staff");
+                                        $sql = "SELECT * FROM classFour";
+                                        $query = mysqli_query($conn, $sql);
+                                        $lastid = mysqli_insert_id($conn);                  
+                                        ?>
+                                            <div class="text-light">
+                                                <?php 
+                                          echo "<h1>$lastid</h1>";
+                                          ?>
+                                            </div>
+                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                                                <h6>Primary Four</h6>
+                                            </div>
+                                            <div class="h6 mb-0 text-light">Total Students</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            <i class="fas fa-person fa-3x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+
+<!-- Earnings (Monthly) Card Example -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card bg-success shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <?php
+                $conn = mysqli_connect("localhost", "root", "", "staff");
+                $sql = "SELECT * FROM jhsThree";
+                $query = mysqli_query($conn, $sql);
+                $lastid = mysqli_insert_id($conn);                  
+?>
+                    <div class="text-light">
+                        <?php 
+                    echo "<h1>$lastid</h1>";
+                    ?>
+                    </div>
+                    <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                        <h6>JHS Three</h6>
+                    </div>
+                    <div class="h6 mb-0 text-light">Total Students</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-school fa-3x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Earnings (Monthly) Card Example -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card bg-danger shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <?php
+                $conn = mysqli_connect("localhost", "root", "", "staff");
+                $sql = "SELECT * FROM registration";
+                $last_id = $conn->insert_id;
+                            
+?>
+                    <div class="text-light">
+                        <?php 
+                    echo "<h1>$last_id</h1>";
+                    ?>
+                    </div>
+                    <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                        <h6>Teacher</h6>
+                    </div>
+                    <div class="h6 mb-0 text-light">Total Teachers</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-user fa-3x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Earnings (Monthly) Card Example -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card bg-secondary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <?php
+                $conn = mysqli_connect("localhost", "root", "", "staff");
+                $sql = "SELECT * FROM non_teaching";
+                $query = mysqli_query($conn, $sql);
+                $lastid = mysqli_insert_id($conn);                  
+                ?>
+                    <div class="text-light">
+                        <?php 
+                echo "<h1>$lastid</h1>";
+                ?>
+                    </div>
+                    <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                        <h6>Non-Teaching</h6>
+                    </div>
+                    <div class="h6 mb-0 text-light">Total Staff</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-school fa-3x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pending Requests Card Example -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card bg-primary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <?php
+                $conn = mysqli_connect("localhost", "root", "", "staff");
+                $sql = "SELECT * FROM jhsTwo";
+                $query = mysqli_query($conn, $sql);
+                $lastid = mysqli_insert_id($conn);                  
+                ?>
+                    <div class="text-light">
+                        <?php 
+                      echo " <h1>$lastid</h1>";
+                    ?>
+                    </div>
+                    <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                        <h6>JHS Two</h6>
+                    </div>
+                    <div class="h6 mb-0 text-light">Total Students</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-school fa-3x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
                     <!-- Content Row -->
 
@@ -447,7 +600,8 @@
                         <div class="col-xl-8 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Students Overview</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -467,7 +621,8 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                     <canvas id="myAreaChart"></canvas>   
+                                        <img src="images/statistics.png" class="img-fluid" alt="statistics">
+                                        <canvas id="myAreaChart"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -498,6 +653,7 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-pie pt-4 pb-2">
+                                        <img src="images/round.png" class="img-fluid" alt="statistics">
                                         <canvas id="myPieChart"></canvas>
                                     </div>
                                     <div class="mt-4 text-center small">
@@ -560,49 +716,51 @@
                                     </div>
                                 </div>
                             </div>
-            <!-- End of Main Content -->
+                            <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                            <!-- Footer -->
+                            <footer class="sticky-footer bg-white">
+                                <div class="container my-auto">
+                                    <div class="copyright text-center my-auto">
+                                        <span>Copyright &copy; Your Website 2021</span>
+                                    </div>
+                                </div>
+                            </footer>
+                            <!-- End of Footer -->
+
+                        </div>
+                        <!-- End of Content Wrapper -->
+
                     </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+                    <!-- End of Page Wrapper -->
 
-        </div>
-        <!-- End of Content Wrapper -->
+                    <!-- Scroll to Top Button-->
+                    <a class="scroll-to-top rounded" href="#page-top">
+                        <i class="fas fa-angle-up"></i>
+                    </a>
 
-    </div>
-    <!-- End of Page Wrapper -->
+                    <!-- Logout Modal-->
+                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Select "Logout" below if you are ready to end your current
+                                    session.</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                    <a class="btn btn-primary" href="login.html">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
- 
 </body>
+
 </html>

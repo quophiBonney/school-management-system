@@ -1,17 +1,5 @@
 <?php 
-if(isset($_POST['login'])) {
-$conn = mysqli_connect("localhost", "root", "", "staff");
-$email = $_POST['email'];
-$password = $_POST['password'];
-$sql = "SELECT * FROM secretary WHERE email = '$email' ";
-$query = mysqli_query($conn, $sql);
-$num = mysqli_num_rows($query);
-if($num > 0){
-    header("Location: dashboard.php");
-}else {
-    echo '<script>alert("Invalid info")<script>';
-}
-}
+require 'controllers/authController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +9,9 @@ if($num > 0){
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true"> 
 <meta name="homepage" content="the main page that visitors sees first">
 <link rel="shortcut icon" href="favicon.png">
-<title>Secretary Login</title>
+<title>Parent Login</title>
 <!--Custom CSS -->
-<link rel="stylesheet" href="fontawesome/css/quophi.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="quophi.css">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
 <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
@@ -37,26 +25,31 @@ if($num > 0){
 
 </script>
 </head> 
-<body class="login">  
+<body id="login_background">  
 <div class="space-out"></div>
-<div class="container-fluid mt-5">
-    <div class="row justify-content-center mt-5">
-    <div class="col-md-6 text-center shadow bg-light mt-5">
-    <h4 class="text-center p-3">SECRETARY LOGIN</h4>
-    <hr>
-        <form action="login.php" method="POST">
+<div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+        <form action="login.php" method="POST" class="bg-light shadow">
+        <h5 class="text-center text-dark"><marquee>PARENT LOGIN</marquee></h5>
+        <small class="text-center font-weight-bold">kindly login as a parent</small>
             <div class="form-group button">
-                <input type="email" name="email" placeholder="Enter email" required="" class="form-control" autocomplete="off">
+                <input type="email" name="email" placeholder="Email" required="" class="form-control text-center" autocomplete="off">
             </div>
             <div class="form-group button">
-                <input type="password" name="password" placeholder="Password" required="" class="form-control" autocomplete="off">
+                <input type="password" name="password" placeholder="Password" required="" class="form-control text-center" autocomplete="off">
             </div>
-            <div class="form-group buttons d-flex bg-success align-items-center justify-content-center text-center">
-            <input type="submit" name="login" value="LOGIN" class="bg-success border-0 text-light">
+            <div class="form-group buttons d-flex bg-primary align-items-center justify-content-center text-center">
+            <input type="submit" name="login" value="LOGIN" class="bg-primary border-0 text-light">
             </div>
-            <a class="font-weight-bolder text-dark" href="signup.php">Add New Secretary</a>
+            <a class="text-dark float-right" href="signup.php">Not yet a member?</a>
+            <a class="text-dark float-left" href="forgot_password.php">Forgot password?</a>
         </form>
-      </p>
+      <p></p>
+     <br><br>
     </div>
   </div>
 </div>
+
+</body>
+</html>

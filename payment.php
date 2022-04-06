@@ -9,19 +9,20 @@
 <link rel="shortcut icon" href="favicon.png">
 <title>Home</title>
 <!--Custom CSS -->
-<linnk rel="stylesheet" href="quophi.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="quophi.css">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
 <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
-
+<!--Boostrap CDN-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src=”https://code.jquery.com/jquery-3.2.1.slim.min.js” integrity=”sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN” crossorigin=”anonymous”>
-
 </script>
+<script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+<script src="https://js.stripe.com/v3/"></script>
 </head> 
 <body>  
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
@@ -64,8 +65,12 @@
 <div class="space-out"></div>
 <div class="space-out"></div>
 <div class="container justify-content-center text-center align-items-center mt-5 p-3">
-    <h3 class="text-center my-3">Pay Fees</h3>
-    <form action="charge.php" method="POST" id="payment-form">
+    <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>School Fees</h3>
+          <h5>$200.00</h5>
+        </div>
+    <form action="/create-checkout-session.php" method="POST" id="payment-form">
         <div class="form-row">
             <input type="text" name="firstName" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
             <input type="text" name="lastName" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
@@ -76,7 +81,7 @@
             <div id="card-errors" role="alert">
             </div>
         </div>
-    <button class="btn btn-primary mt-2 btn-block">Submit Payment</button>
+    <button type="submit" id="checkout-button" class="btn btn-primary mt-2 btn-block">Pay Fess</button>
     </form>
 </div>
 

@@ -8,7 +8,7 @@
 <link rel="shortcut icon" href="favicon.png">
 <title>Home</title>
 <!--Custom CSS -->
-<link rel="stylesheet" href="quophi.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="quophi.css?v=<?php echo time()?>">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
 <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
@@ -143,11 +143,9 @@
                 <button type="button" name="send_message" class="btn btn-primary d-block form-control">SEND MESSAGE</button>
             </div>
         </form>
-      </p>
     </div>
   </div>
 </div>
-<div class="space-out"></div>
 <div class="space-out"></div>
 <div class="fluid justify-content-center bg-dark text-center mt-4 p-3 footer-section">
   <div class="row">
@@ -158,7 +156,6 @@
       <li><a href="courses.php">Courses</a></li>
       <li><a href="contact.php">Contact</a></li>
       <li><a href="facilities.php">Facilities</a></li>
-      <li><a href="dashboard.php">Dashboard</a></li>
 </ul>
     </div>
     <div class="col-md-3">
@@ -167,7 +164,6 @@
       <li><a href="index.php">Home</a></li>
       <li><a href="courses.php">Courses</a></li>
       <li><a href="contact.php">Contact</a></li>
-      <li><a href="dashboard.php">Dashboard</a></li>
 </ul>
     </div>
     <div class="col-md-3">
@@ -183,9 +179,9 @@
     <h5 class="text-center text-danger text-uppercase">Follow Us</h5>
       <ul class="quicklinks justify-content-center text-center d-flex">
                 <li class="mr-2"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
-                <li  class="mr-2"><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
-                <li  class="mr-2"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                <li  class="mr-2"><a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li class="mr-2"><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="mr-2"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="mr-2"><a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a></li>
                 
             </ul>
     </div>
@@ -202,10 +198,12 @@
     }
   })
   </script>
-</body>
-</html>
-<script>
-function dashboard() {
+  <script>
+  function dashboard() {
 alert("Dashboard is for only admin. Thank you");
 }
 </script>
+</body>
+</html>
+
+

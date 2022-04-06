@@ -1,4 +1,6 @@
 <?php 
+ $conn = mysqli_connect('localhost', 'root', '', 'staff');
+ 
 if(isset($_POST['register'])) {
     $staffName = $_POST['staffName'];
     $email = $_POST['email'];
@@ -9,7 +11,6 @@ if(isset($_POST['register'])) {
     $tmp_name = $_FILES['image']['tmp_name'];
     $folder = "folder/". $filename;
 
-    $conn = mysqli_connect('localhost', 'root', '', 'staff');
     $sql = "INSERT INTO registration(staffName, email, contact, department, image)
     VALUES('$staffName', '$email', '$contact', '$department', '$filename')";
     mysqli_query($conn, $sql);
@@ -19,6 +20,7 @@ if(isset($_POST['register'])) {
         $msg = "Failed";
     }
 }
+print_r($image);
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ if(isset($_POST['register'])) {
 <link rel="shortcut icon" href="favicon.png">
 <title>Staff Registration</title>
 <!--Custom CSS -->
-<linnk rel="stylesheet" href="quophi.css">
+<link rel="stylesheet" href="quophi.css">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
 <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 

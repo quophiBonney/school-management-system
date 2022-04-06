@@ -1,30 +1,5 @@
-<?php 
-if(isset($_POST['signup'])) {
-$conn = mysqli_connect("localhost", "root", "", "staff");
-$email = $_POST['email'];
-$password = $_POST['password'];
-$password = password_hash($password, PASSWORD_DEFAULT);
-$confirm_password = $_POST['confirm_password'];
-if($password == "$confirm_password"){
-    $isUsernameTaken = "SELECT * FROM secretary WHERE email = '".$_POST['email']. "'";
-    $result = mysqli_query($conn, $isUsernameTaken);
-    $num = mysqli_num_rows($result);
-
-    if($num > 0) {
-        echo '<script>alert("User info has already exist")</script>';
-    }else {
-        $sql = "INSERT INTO secretary(email, password)VALUES('$email', '$password')";
-        $query = mysqli_query($conn, $sql);
-        
-        if($query){
-            echo '<script>alert("Successfully sign up")<script>';
-            header("Location: dashboard.php");
-    }else {
-        echo '<script>alert("Something went wrong")</script>';
-    }
-}
-}
-}
+<?php
+require 'controllers/authController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,9 +9,9 @@ if($password == "$confirm_password"){
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true"> 
 <meta name="homepage" content="the main page that visitors sees first">
 <link rel="shortcut icon" href="favicon.png">
-<title>Secretary Login</title>
+<title>Parent Signup</title>
 <!--Custom CSS -->
-<link rel="stylesheet" href="fontawesome/css/quophi.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="quophi.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
 <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
@@ -52,27 +27,40 @@ if($password == "$confirm_password"){
 </head> 
 <body class="login">  
 <div class="space-out"></div>
-<div class="container-fluid mt-5">
-    <div class="row justify-content-center mt-5">
-    <div class="col-md-6 text-center shadow bg-light mt-5">
-    <h4 class="text-center p-3">SECRETARY SIGNUP</h4>
-    <hr>
-        <form action="signup.php" method="POST">
+<div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+        <form action="signup.php" method="POST" class="bg-light shadow">
+        <h5 class="text-center text-dark"><marquee>PARENT SIGNUP</marquee></h5>
+        <small class="text-center font-weight-bold">kindly signup as a parent</small>
             <div class="form-group button">
-                <input type="email" name="email" placeholder="Enter email" required="" class="form-control" autocomplete="off">
-            </div>
-            <div class="form-group button">
-                <input type="password" name="password" placeholder="Password" required="" class="form-control" autocomplete="off">
+                <input type="text" name="name" placeholder="Full Name" required="" class="form-control text-center" autocomplete="off">
             </div>
             <div class="form-group button">
-                <input type="password" name="confirm_password" placeholder="Repeat Password" required="" class="form-control" autocomplete="off">
+                <input type="text" name="contact" placeholder="Contact" required="" class="form-control text-center" autocomplete="off">
             </div>
-            <div class="form-group buttons d-flex bg-success align-items-center justify-content-center text-center">
-            <input type="submit" name="signup" value="SIGN UP" class="bg-success border-0 text-light">
+            <div class="form-group button">
+                <input type="email" name="email" placeholder="Email" required="" class="form-control text-center" autocomplete="off">
             </div>
-            <a class="font-weight-bolder text-dark" href="signup.php">Add New Secretary</a>
+            <div class="form-group button">
+                <input type="text" name="wardName" placeholder="Ward Name" required="" class="form-control text-center" autocomplete="off">
+            </div>
+            <div class="form-group button">
+                <input type="text" name="wardClass" placeholder="Ward Class" required="" class="form-control text-center" autocomplete="off">
+            </div>
+            <div class="form-group button">
+                <input type="password" name="password" placeholder="Password" required="" class="form-control text-center" autocomplete="off">
+            </div>
+            <div class="form-group button">
+                <input type="password" name="repeatPassword" placeholder="Repeat Password" required="" class="form-control text-center" autocomplete="off">
+            </div>
+            <div class="form-group buttons d-flex bg-primary align-items-center justify-content-center text-center">
+            <input type="submit" name="register" value="SIGN UP" class="bg-primary border-0 text-light">
+            </div>
+            <a class="text-dark" href="login.php">Already Signup?</a>
         </form>
-      </p>
+      <p></p>
+     <br><br>
     </div>
   </div>
 </div>

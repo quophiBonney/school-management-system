@@ -1,12 +1,19 @@
 <?php 
+session_start();
 if(isset($_POST['login'])) {
 $conn = mysqli_connect("localhost", "root", "", "staff");
 $email = $_POST['email'];
 $password = $_POST['password'];
-if($email == "admin@gmail.com" && $password == "admin12") {
-    header("Location: dashboard.php");
-}else {
-    echo '<script>alert("Invalid inputs")</script>';
+if($email == $email && $password == $password){
+    $isParentnameTaken = "SELECT * FROM admin WHERE email = '$email' AND password = '$password'";
+    $result = mysqli_query($conn, $isParentnameTaken);
+    $num = mysqli_num_rows($result);
+    if($num > 0){
+        echo '<script>alert("Login Successful")</script>';
+        header("Location: dashboard.php");
+    }else {
+        echo '<script>alert("You must signup first")</script>';
+    }
 }
 }
 ?>
@@ -18,9 +25,9 @@ if($email == "admin@gmail.com" && $password == "admin12") {
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true"> 
 <meta name="homepage" content="the main page that visitors sees first">
 <link rel="shortcut icon" href="favicon.png">
-<title>Home</title>
+<title>Admin Login</title>
 <!--Custom CSS -->
-<link rel="stylesheet" href="fontawesome/css/quophi.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="quophi.css?v=<?echo time()?>">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
 <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
 
@@ -34,26 +41,33 @@ if($email == "admin@gmail.com" && $password == "admin12") {
 
 </script>
 </head> 
-<body class="login">  
+<body id="login_background">  
 <div class="space-out"></div>
-<div class="space-out"></div>
-<div class="container-fluid mt-5">
-    <div class="row justify-content-center mt-5">
-    <div class="col-md-6 text-center shadow bg-light mt-5">
-    <h4 class="text-center p-3">ADMIN LOGIN</h4>
-        <form action="login.php" method="POST">
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Enter email" required="" class="button form-control" autocomplete="off">
+<div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+        <form action="login.php" method="POST" class="bg-light height-auto shadow">
+        <h5 class="text-center text-dark"><marquee>ADMIN LOGIN</marquee></h5>
+        <small class="text-center font-weight-bold">kindly login as an admin</small>
+            <div class="form-group button mt-3">
+                <input type="email" name="email" placeholder="Email" required="" class="form-control text-center" autocomplete="off">
             </div>
-            <div class="form-group">
-                <input type="password" name="password" placeholder="Password" required="" class="button form-control" autocomplete="off">
+            <div class="form-group button">
+                <input type="password" name="password" placeholder="Password" required="" class="form-control text-center" autocomplete="off">
             </div>
-        
-            <button type="submit" name="login" class="buttons bg-success w-100 d-block border-0 text-light">LOGIN</button>
-        
-            <a class="font-weight-bolder text-dark" href="#">Add New Admin</a>
+            <div class="form-group buttons d-flex bg-primary align-items-center justify-content-center text-center">
+            <input type="submit" name="login" value="LOGIN" class="bg-primary border-0 text-light">
+            </div>
+            <div class="form-group button">
+            <a class="text-dark float-right" href="signup.php">Add new admin?</a>
+            <a class="text-dark float-left" href="forgot_password.php">Forgot password?</a>
+         </div>
         </form>
-      </p>
+      <p></p>
+     <br><br>
     </div>
   </div>
 </div>
+
+</body>
+</html>
